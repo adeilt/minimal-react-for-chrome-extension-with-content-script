@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    contentScript: './src/content.jsx',
+    content: './src/content.jsx',
   },
   module: {
     rules: [
