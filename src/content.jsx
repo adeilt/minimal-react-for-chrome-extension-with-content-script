@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import "./content_script.css";
+import "./content.css";
 
 ReactDOM.render(
   <Sidecar />,
