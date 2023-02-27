@@ -43,7 +43,7 @@ brevity of code.
 
 ## Enumerated details
 
-What are all these files?
+### What are all these files?
 
 - `src/icons/*`
   - Extension icons.
@@ -74,9 +74,40 @@ What are all these files?
   - The venerable MIT license.
 - `README.md`
   - This document.
+- `.vscode/`, `.eslintrc.js`, `.gitattributes`, `.prettierrc` **ALL OPTIONAL**
+  - These all enforce my _opinions_ about how things should be edited and
+    formatted. They can all be edited to suit your taste or removed entirely if
+    you don't want code style auditing and enforcement. After removing them
+    from the original fork of rafaelcamargo's `minimal-react` repo, I have
+    begrudgingly added them back when I realized that they are, in fact, minimal
+    in the sense that I would never want to work on a repo without them enabled.
+
+### What are all these dev dependencies?
+
+- Required for transpilation of JSX:
+  - `@babel/core`
+  - `@babel/preset-react`
+  - `babel-loader`
+- Required for triggering transpilation and composing the results with static
+  files in the dist directory:
+  - `webpack`
+  - `webpack-cli`
+  - `css-loader`
+  - `style-loader`
+  - `copy-webpack-plugin`
+  - `html-webpack-plugin`
+- Purely optional stuff that is only minimal in the sense that - like an
+  industrial strength hair dryer - I can't live without[^1]:
+  - `eslint`
+  - `eslint-config-prettier`
+  - `eslint-plugin-prettier`
+  - `eslint-plugin-react`
+  - `prettier`
 
 ## Based on
 
 - https://github.com/lxieyang/chrome-extension-boilerplate-react
 - https://github.com/rafaelcamargo/minimal-react
 - https://github.com/sszczep/chrome-extension-webpack
+
+[^1]: Spaceballs!
