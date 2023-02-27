@@ -14,6 +14,7 @@ document.body.appendChild(sidecar_container);
 const root = createRoot(sidecar_container);
 root.render(<Sidecar />);
 
+// The only React component in this whole mess.  :)
 function Sidecar () {
   return <div id="sidecar">I'm a sidecar!  Vroom!</div>;
 }
