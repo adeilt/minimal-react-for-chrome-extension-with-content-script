@@ -3,20 +3,15 @@ import ReactDOM from 'react-dom';
 
 import "./content.css";
 
-var container_id = 'sidecar_container';
+const container_id = 'sidecar_container';
 
-if(document.getElementById(container_id)){
- 	document.getElementById(id).parentNode.removeChild(document.getElementById(container_id));
-} else {
-  let sidecar_container = document.createElement('div');
-  sidecar_container.id = container_id;
-  document.body.appendChild(sidecar_container);
-}
+// Create the container and add it to the body
+const sidecar_container = document.createElement('div');
+sidecar_container.id = container_id;
+document.body.appendChild(sidecar_container);
 
-ReactDOM.render(
-  <Sidecar />,
-  document.getElementById('sidecar_container')
-);
+// Load the sidecar into the container
+ReactDOM.render(<Sidecar />, sidecar_container);
 
 function Sidecar () {
   return <div id="sidecar">I'm a sidecar!  Vroom!</div>;
