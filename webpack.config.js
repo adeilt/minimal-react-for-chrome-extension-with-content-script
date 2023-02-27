@@ -1,19 +1,32 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/background.js',
-  output: {
-    filename: './dist/background.bundle.js'
+  mode: 'production',
+  entry: {
+    contentScript: './src/content_script.jsx',
   },
   module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: ['babel-loader']
-    }]
+    rules: [
+      {
+        test: /\.jsx$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/,
+      },
+    ],
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx'],
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
-  mode: 'none'
-}
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/*.css', to: 'dist/' },
+        { from: 'src/*.js', to: 'dist/' },
+      ],
+    }),
+  ],
+};
