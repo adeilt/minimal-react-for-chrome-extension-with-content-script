@@ -31,7 +31,6 @@ module.exports = {
       patterns: [
         { from: 'LICENSE' },
         { from: 'src/manifest.json' },
-        { from: 'src/background.js' },
         { from: 'src/icons/', to: 'icons/'},
       ],
     }),
