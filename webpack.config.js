@@ -14,6 +14,10 @@ module.exports = {
         use: ['babel-loader'],
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   output: {
@@ -24,8 +28,10 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: 'src/*.css', to: 'dist/' },
-        { from: 'src/*.js', to: 'dist/' },
+        { from: 'LICENSE' },
+        { from: 'src/manifest.json' },
+        { from: 'src/background.js' },
+        { from: 'src/icons/', to: 'icons/'},
       ],
     }),
   ],
