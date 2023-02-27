@@ -1,5 +1,8 @@
 # Very Small Chrome Extension with Content Script using React
+
 A very small Chrome Extension skeleton that uses content scripts and React.js.
+I made this as small and simple as I could while preserving the ability to use  
+JSX.
 
 ## Usage 
 
@@ -33,6 +36,11 @@ I took several different repos and cobbled this together from them.  I updated
 all of the npm package versions, modernized some React stuff to version 18, got
 a minimum viable extension up and running, and then made a few passes to cut out
 as much complexity as possible.
+
+I'm very new to React, so it's likely that I missed some things that could
+have been removed.  My goal was more simplicity and cleanliness than actual
+brevity of code.
+
 
 ## Enumerated details
 
