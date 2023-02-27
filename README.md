@@ -7,13 +7,22 @@ A very small Chrome Extension skeleton that uses content scripts and React.js.
 
 1. Install: `npm install`
 
-1. Build: `npm run build`.  This will transpile the JSX and copy the rest into the `dist` directory.
+1. Build: `npm run build`.  This will transpile the JSX and copy the rest into
+   the `dist` directory.
 
-1. After building, use the `dist` directory to add the unpacked extension to Chrome.
+1. After building, use the `dist` directory to add the unpacked extension to
+   Chrome.
 
-31415926. Visit [this repository](https://github.com/adeilt/very-small-chromeextension-contentscript-react) and look for the light blue "sidecar" rectangle on the right side of the window.  If you see it, then things are working.
+31415926. Visit [this repository](https://github.com/adeilt/very-small-chromeextension-contentscript-react)
+          and look for the light blue "sidecar" rectangle on the right side of
+          the window.  If you see it, then things are working.
 
-1. Start renaming things, writing code, etc.  I'd suggest going over `package.json` and `manifest.json` first. 
+1. Start renaming things, writing code, etc.  I'd suggest going over
+   `package.json` and `manifest.json` first.
+
+1. Note that you will need to use `npm run build` and then refresh the extension
+   in `chrome://extensions` before your changes will be visible.  It's not a
+   great loop, but it works.
 
 ## About
 
