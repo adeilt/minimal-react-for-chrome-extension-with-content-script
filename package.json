@@ -8,9 +8,8 @@
   },
   "keywords": [
     "react",
-    "chromeextension",
-    "configscript",
-    "config"
+    "chrome-extension",
+    "config-script"
   ],
   "author": "Wil Langford",
   "license": "MIT",
