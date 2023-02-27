@@ -4,18 +4,14 @@
   "version": "0.1",
   "description": "very small chrome extension with react and content scripts",
   "author": "Wil Langford",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "icons": {
-    "16": "icons/16.png",
-    "48": "icons/48.png",
-    "128": "icons/128.png"
-  },
+  "permissions": ["activeTab", "scripting"],
   "host_permissions": ["https://*/*"],
   "content_security_policy": {
     "extension_pages": "default-src 'none'; style-src 'self'; media-src 'none'; child-src 'none'; connect-src 'none'; script-src 'self'; img-src 'self'; object-src 'none'"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "options_ui": {
     "page": "options.html",
@@ -28,5 +24,9 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": ["activeTab", "scripting"]
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
 }
